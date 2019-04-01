@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201903270851128_PopulateCategoryTable.Designer.cs">
       <DependentUpon>201903270851128_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904011359393_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\201904011359393_AddNameColumnToApplicationUser.Designer.cs">
+      <DependentUpon>201904011359393_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -213,7 +217,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -288,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903270851128_PopulateCategoryTable.resx">
       <DependentUpon>201903270851128_PopulateCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904011359393_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>201904011359393_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
