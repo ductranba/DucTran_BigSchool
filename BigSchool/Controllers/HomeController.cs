@@ -23,7 +23,7 @@ namespace BigSchool.Controllers
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
             var temp = upcommingCousers.Count();
-                
+
             return View(upcommingCousers);
         }
 

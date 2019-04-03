@@ -3,7 +3,7 @@ namespace BigSchool.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitailModel : DbMigration
+    public partial class InitialModel : DbMigration
     {
         public override void Up()
         {
@@ -35,6 +35,7 @@ namespace BigSchool.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(nullable: false, maxLength: 255),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),

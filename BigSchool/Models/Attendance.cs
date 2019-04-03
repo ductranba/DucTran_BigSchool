@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,14 +11,14 @@ namespace BigSchool.Models
     {
         public Course Course { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        public int CoursedId { get; set; }
-
         public ApplicationUser Attendee { get; set; }
 
         [Key]
+        [Column(Order = 1)]
+        public int CourseId { get; set; }
+
+        [Key]
         [Column(Order = 2)]
-        public string AttendeeId { get; set; }
+        public int AttendeeId { get; set; }
     }
 }
