@@ -186,9 +186,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DTOs\AttendanceDto.cs" />
+    <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,9 +206,9 @@
     <Compile Include="Migrations\201904030831361_PopulateCategoryTable.Designer.cs">
       <DependentUpon>201904030831361_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904030900429_AddAttendance.cs" />
-    <Compile Include="Migrations\201904030900429_AddAttendance.Designer.cs">
-      <DependentUpon>201904030900429_AddAttendance.cs</DependentUpon>
+    <Compile Include="Migrations\201904081531594_AddAttribuildFollowingsTable.cs" />
+    <Compile Include="Migrations\201904081531594_AddAttribuildFollowingsTable.Designer.cs">
+      <DependentUpon>201904081531594_AddAttribuildFollowingsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -283,6 +286,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Attendances\" />
+    <Folder Include="Views\Followings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -307,8 +311,8 @@
     <EmbeddedResource Include="Migrations\201904030831361_PopulateCategoryTable.resx">
       <DependentUpon>201904030831361_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904030900429_AddAttendance.resx">
-      <DependentUpon>201904030900429_AddAttendance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904081531594_AddAttribuildFollowingsTable.resx">
+      <DependentUpon>201904081531594_AddAttribuildFollowingsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
