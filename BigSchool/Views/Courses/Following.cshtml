@@ -1,0 +1,51 @@
+﻿
+@model BigSchool.ViewModels.CoursesViewModel
+@{
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul class="course">
+    @foreach (var followee in Model.UpcommingFollowee)
+    {
+        <li>           
+            <div class="details">
+                <span class="name">
+                    @followee.Name
+                </span>
+                <span class="name">
+                    @followee.Email
+                </span>
+            </div>
+        </li>
+    }
+</ul>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(".js-toggle-attendance").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/attendances", { courseId: button.attr("data-course-id") })
+                    .done(function () {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Going");
+                    })
+                    .fail(function () {
+                        alert("Somthing wrong!");
+                    })
+            });
+
+            $(".js-toggle-follow").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/followings", { followeeId: button.attr("data-user-id") })
+                    .done(function () {
+                        button.text("Following");
+                    })
+                    .fail(function () {
+                        alert("Something was wrong!!");
+                    });
+            });
+        });
+    </script>
+}
